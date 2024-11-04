@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Bewerbungsportfolio</title>
+
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+            <link rel="stylesheet" href="main.css">
+
+            <link rel="stylesheet" href="CSS/media.css">
+
+            <link rel="stylesheet" href="CSS/infocard.css">
+
+            <link rel="stylesheet" href="CSS/service.css">
+
+            <link rel="stylesheet" href="CSS/skill.css">
+
+            <link rel="stylesheet" href="CSS/projekt.css">
+
+            <link rel="stylesheet" href="CSS/zertifikat.css">
+
+            <link rel="stylesheet" href="CSS/kontakt.css">
+            <!-- todo schriftart service
+             navbar icons handy 
+             ql verlinken
+             quicklinks hover infocard + buttons schriftfarbe
+             service vollenden-->
+        </head>
+        
+        <body>
+            <div id="grid">
+                <header id="header">
+                    <nav id="nav">
+                        <ul id="navBar">
+                            <li>
+                                <i class="fa fa-home" aria-hidden="true"></i>
+                                <a href="#grid">Home</a>
+                            </li>
+
+                            <li>
+                                <i class="fa fa-bolt" aria-hidden="true"></i>
+                                <a href="#service">Service</a>
+                            </li>
+
+                            <li>
+                                <i class="fas fa-lightbulb"></i>
+                                <a href="#skillgrid">Skills</a>
+                            </li>
+                            
+                            <li>
+                                <i class="fa fa-code" aria-hidden="true"></i>
+                                <a href="#projekt">Projekte</a>
+                            </li>
+
+                            <!-- Cardslider, universe, schere -->
+
+                            <li class="hideelement">
+                                <i class="fa fa-trophy" aria-hidden="true"></i>
+                                <a href="#Zertifikate">Zertfikate</a>
+                            </li>
+
+                            <li>
+                                <i class="fa fa-address-book" aria-hidden="true"></i>
+                                <a href="#kontakt">Kontakt</a>
+                            </li>
+
+                        </ul>
+                    </nav>
+
+                    <div class="hamburgerspan" onclick="displayNav()">
+                        <span class="ham"></span>
+                        <span class="ham"></span>
+                        <span class="ham"></span>
+                    </div>
+                </header>
+
+                <main id="content">
+                    <div id="contentDiv">
+                        <aside id="sideElement">
+                            <div id="sidediv">
+                                <p class="sdp">Code with passion</p>
+
+                                <div class="nummer">01/06</div>
+                            </div>
+                        </aside>
+
+                        <article id="mainContent">
+                            <div id="cardbox">
+                                <div id="infocard" style="display: block;">
+                                    <div class="front">
+                                        <div class="frontpic">
+                                            <img src="Images/Bewerbungsfoto.JPG" alt="" class="pic">
+                                            
+                                            <p style="text-align: center;">Thomas Klingenberg</p>
+                                        </div>
+                                        
+                                        <div class="frontinfo">
+                                            <div class="top">
+                        
+                                                <br>
+                        
+                                                <p style="text-align: center;">Ausgelernter Kaufmann für E-Commerce. <br>
+                                                    Spezialisiert auf Front-End-Webdesign.
+                                                    <br>
+                                                </p>
+                                            </div>
+                            
+                                            <div class="bottom">
+                                                <div>                   
+                                                    <button>HTML</button>
+                                                    <button>CSS</button>
+                                                </div>
+                                                
+                                                <div>
+                                                    <button>Bootstrap</button>
+                                                    <button>Javascript</button>
+                                                </div>
+                                            </div>
+                            
+                                            <span style="position: absolute; right: 1dvw; bottom: 1dvw;">
+                                                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                            </span>
+
+                                    </div>
+                                    </div>
+                            
+                                    <div class="back">
+                                        <div class="backpic">
+                                            <img src="Images/Bewerbungsfoto.JPG" alt="" class="pic">
+                            
+                                            <p>Kaufmann für E-Commerce</p>
+                                        </div>
+                            
+                                        <div class="backinfo">
+                                            <div style="text-align: center;">
+
+                                                <br>
+                                                <p>
+                                                    Create a good customer journey  <br>
+                                                    Through a memorable experience. <br>
+                                                    Design it with passion!
+                                                </p>
+                                                <br>
+
+                                                <div class="quicklinks">
+                                                    <a href="https://www.xing.com/profile/Thomas_Klingenberg087697" target="_blank" class="xing">
+                                                        <i class="fab fa-xing xing" aria-hidden="true"></i>
+                                                    </a>
+
+                                                    <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" target="_blank" class="linkedin">
+                                                        <i class="fab fa-linkedin linkedin" aria-hidden="true"></i>
+                                                    </a>
+                                                </div>                                               
+
+                                                <a href="mailto:thomasfrontendjobs@gmail.com" class="contactbutton">Kontaktieren</a>
+
+                                                <span style="position: absolute; left: 1dvw; bottom: 1dvw;">
+                                                    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </main>
+            </div>
+
+            <div id="service">
+                <div id="selfportrait">
+                    <img src="Images/comicpic.jpg" alt="" >
+                </div>
+
+                <div id="aboutme">
+
+                    <p id="heading">
+                        <br>
+                        Meine Dienste
+                    </p>
+
+                    <p id="aboutp">
+
+                        Während meiner Ausbildung zum Kaufmann für E-Commerce habe ich Erfahrung in den Bereichen Wertstromüberwachung sowie der Verwaltung und Gestaltung von Webshops gesammelt. Besonders fasziniert mich die Gestaltung von Webseiten, da ich großes Interesse an kreativen und benutzerfreundlichen Lösungen habe.
+                        <br><br>
+
+                        Neben dem Abarbeiten tagesaktueller Geschäftsfälle konnte ich Erfahrungen im Bereich Marketing und Vertrieb sammeln. Diese Tätigkeiten haben mir geholfen, ein umfassendes Verständnis für die Vermarktung und den Verkauf von Produkten zu entwickeln. Durch das Erheben und Auswerten personenbezogener Daten konnte ich meinen analytischen Blick schärfen und fundierte Entscheidungen treffen, die sowohl die Effizienz der Prozesse steigern als auch eine zielgerichtete Kundenansprache ermöglichen.
+                    </p>
+
+                    <div class="shortsummary">
+                        <table>
+                            <tr>
+                                <td> Thomas Klingenberg</td>
+                                <td> 29 Jahre</td>
+                            </tr>
+                            <tr>
+                                <td> +49 1623954631</td>
+                                <td> Kornstraße 320, Bremen</td>
+                            </tr>
+                            <tr>
+                                <td> 3 Jahre Erfahrung</td>
+                                <td> Offen für Freelancing</td>
+                            </tr>
+                            <tr>
+                                <td> <i class="fab fa-linkedin" aria-hidden="true" style="font-size: 25px; text-indent: 0px;"></i>: <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" target="_blank" style="text-decoration: none; color: blue;">LinkedIn</a></td>
+                                <td> <i class="fab fa-xing" aria-hidden="true" style="font-size: 25px; text-indent: 0px;"></i>: <a href="https://www.xing.com/profile/Thomas_Klingenberg087697" target="_blank" style="text-decoration: none; color: blue;">Xing</a></td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+
+                <div class="nummer">02/06</div>
+            </div>
+
+            <div id="skillgrid">
+                <div id="skillbox">
+
+                    <h2 style="text-align: center;">Hardskills</h2>
+
+                    <div class="hardskills">
+                        
+                        <div class="fortschritt" id="html">
+                            <div class="innererKreis" >
+                                <i class="fa-solid fa-bolt icon general"></i>
+                                <i class="fab fa-html5 specific" aria-hidden="true"></i>
+                                <p class="innerp">HTML & CSS</p>
+                            </div>
+                        </div>
+
+                        <div class="fortschritt" id="bt">
+                            <div class="innererKreis">
+                                <i class="fa-solid fa-bolt icon general"></i>
+                                <i class="fa-brands fa-bootstrap specific"></i>
+                                <p class="innerp">Bootstrap</p>
+                            </div>
+                        </div>
+
+                        <!-- -->
+
+                        <div class="fortschritt" id="office">
+                            <div class="innererKreis">
+                                <i class="fa-solid fa-bolt icon general"></i>
+                                <i class="fa-brands fa-microsoft specific" aria-hidden="true"></i>
+                                <p class="innerp">Office365</p>
+                            </div>
+                        </div>
+
+                        <div class="fortschritt" id="photo">
+                            <div class="innererKreis">
+                                <i class="fa-solid fa-bolt icon general"></i>
+                                <i class="fa fa-camera specific" aria-hidden="true"></i>
+                                <p class="innerp">Photoshop</p>
+                            </div>
+                        </div>
+
+                        <div class="fortschritt" id="js">
+                            <div class="innererKreis">
+                                <i class="fa-solid fa-bolt icon general"></i>
+                                <i class="fa-brands fa-js specific"></i>
+                                <p class="innerp">Javascript</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 style="text-align: center;">Softskills</h2>
+
+                    <div class="softskills">
+
+                        <div class="fortschritt" id="zuverlässigkeit">
+                            <div class="innererKreis">
+                                <i class="fa-solid fa-bolt icon"></i>
+                                <p class="innerp">Zuverlässigkeit</p>
+                            </div>
+
+                            <p class="outerP">
+                                Verlass
+                            </p>
+                        </div>
+
+                        <div class="fortschritt" id="engagement">
+                            <div class="innererKreis">
+                                <i class="fa-solid fa-bolt icon"></i>
+                                <p class="innerp">Engagement</p>
+                            </div>
+
+                            <p class="outerP">
+                                Engagement
+                            </p>
+                        </div>
+
+                        <div class="fortschritt" id="ziel">
+                            <div class="innererKreis">
+                                <i class="fa-solid fa-bolt icon"></i>
+                                <p class="innerp">Zielstrebigkeit</p>
+                            </div>
+
+                            <p class="outerP">Fokus</p>
+                        </div>
+
+
+                        <!-- Zuverlässigkeit 100%  Kritikfähigkeit raus, (Ausdrucksfähigkeit) 95%, Toleranz Respekt  Empathie,-->
+
+                        <div class="fortschritt" id="empathie">
+                            <div class="innererKreis">
+                                <i class="fa-solid fa-bolt icon"></i>
+                                <p class="innerp">Empathie</p>
+                            </div>
+
+                            <p class="outerP">
+                                Respektvoll
+                            </p>
+                        </div>
+
+                        <div class="fortschritt" id="Kritik">
+                            <div class="innererKreis">
+                                <i class="fa-solid fa-bolt icon"></i>
+                                <p class="innerp kritik">Kritikfähigkeit</p>
+                            </div>
+
+                            <p class="outerP kritik">
+                                Kritik
+                            </p>
+                        </div>
+
+                    </div>   
+                <div class="nummer">03/06</div>
+
+                </div>
+            </div>
+
+            <div id="projekt">
+
+                <div class="projektdiv">
+                        In diesem Abschnitt des Dokuments möchte ich meine Fertigkeiten in Form kleiner Projekte vorweisen. Im Rahmen meiner Ausbildung habe ich mein Interesse in Bereich der Gestaltung von Webpages entdeckt. Ich kann mich mit dem Anforderungsprofil identifzieren und möchte meine erlernten Fähigkeiten festigen. 
+                        <br>
+                        Ich bin stets bemüht mir neue Verfahren und Techniken anzueignen, um der Schnelllebigkeit der IT schritt zu halten. In einer kleinen Veranschaulichung möchte ich meinen technischen Stand wiederspiegeln. 
+                        <br>
+
+                        In dem ersten Beispiel sieht man eine Abbildung des Sonnenstystems. 
+                        
+                        <span style="font-size: 13px; color: gray;">Hinweis: Der Maßstab und die Abstände sind nicht realer Natur. Die Projekte sind nicht auf mobile Ansichten ausgelegt.</span>
+                        
+                        <button popovertarget="Sonnensystem" class="projektBtn" onclick="disableButton()">
+                            Sonnensystem
+                        </button>
+
+                        <br>
+
+                        In dem nächsten Beispiel habe ich ein kleines Minigame erstellt. Es handelt sich um "Schere, Stein, Papier". Dort habe ich Event-Listener und math.Obj implementiert. Ich habe diese Projekte in meiner Freizeit erstellt.
+                        <br>
+                        <button popovertarget="schere" class="projektBtn">
+                            Schere, stein, Papier
+                        </button>
+
+                    <br>
+
+                    <div popover id="Sonnensystem" class="divpopcon" style="width: 75dvw; height: 75dvh;">
+                        <iframe src="https://simplessonnensystem.netlify.app/" style="width: 100%; height: 100%; margin: 0; padding: 0;" frameborder="0"></iframe>
+                    </div>
+
+                    <div popover id="schere" class="divpopcon" style="width: 75dvw; height: 75dvh;">
+                        <iframe src="https://schere.netlify.app/" frameborder="0" width="100%" height="100%" style="margin: 0; padding: 0;"></iframe>
+                    </div>
+                </div>
+
+
+
+                <div class="nummer">04/06</div>
+            </div>
+
+            <div id="Zertifikate">
+                <div class="zertdiv">
+                    <div class="zertbox" id="IHK" onclick="displayzert('ihkbox')"></div>
+                    <div class="popoverbox" id="ihkbox">
+                        <i class="fa fa-close" aria-hidden="true" onclick="closepop()"></i>
+                    </div>
+
+
+                    <div class="zertbox" id="Zeugnis" onclick="displayzert('zeugnisbox')"></div>
+                        <div class="popoverbox" id="zeugnisbox">
+                            <i class="fa fa-close" aria-hidden="true" onclick="closepop()"></i>
+                        </div>
+
+                    <div class="zertbox" id="ICDL" onclick="displayzert('icdlbox')"></div>
+                        <div class="popoverbox" id="icdlbox">
+                            <i class="fa fa-close" aria-hidden="true" onclick="closepop()"></i>
+                        </div>
+
+                    <div class="zertbox" id="Nordic" onclick="displayzert('nordicbox')"></div>
+                        <div class="popoverbox" id="nordicbox">
+                            <i class="fa fa-close" aria-hidden="true" onclick="closepop()"></i>
+                        </div>
+
+<!-- Nordic Campus ersetzen mit Google  -->
+
+                    <div class="zertbox" id="Google" onclick="displayzert('googlebox')"></div>
+                        <div class="popoverbox googlebox" id="googlebox">
+                            <i class="fa fa-close" aria-hidden="true" onclick="closepop()"></i>
+                        </div>
+                </div>  
+                
+                <div id="mobile" style="width: 80dvw;">
+                    <div id="cardSlider" class="container carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="card">
+                                    <img src="Images/IHK.png" class="card-img-top" alt="">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="card">
+                                    <img src="Images/Zeugnis.png" class="card-img-top" alt="Card Image 2">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="card">
+                                    <img src="Images/NordicCampus.png" class="card-img-top" alt="Card Image 2">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="card">
+                                    <img src="Images/ICDL.jpg" class="card-img-top" alt="Card Image 2">
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#cardSlider" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#cardSlider" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="nummer hide">05/06</div>
+            </div>
+
+            <div id="kontakt">
+
+                <div id="konform">
+                    <div id="Anschrift">
+                        <form onsubmit="event.preventDefault(); sendmail();">
+                            Namen angeben:
+                            <input type="name" name="name" id="name" placeholder="Namen eingeben" required>
+                            <br>
+
+                            E-Mail angeben:
+                            <input type="email" id="email" name="email" placeholder="E-Mail angeben" required>
+
+                            <br>
+                            Nachricht verfassen:
+                            <textarea name="comments" id="message" placeholder="Nachricht eingeben" required></textarea>
+                            
+                            <br>
+
+                            <button class="projektBtn">
+                                Senden
+                            </button>
+                            </form>
+
+                        
+                    </div>
+
+                </div>
+
+                <div class="nummer">06/06</div>
+            </div>
+            
+        <script src="portfolio.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        
+        </body>
+    </html>

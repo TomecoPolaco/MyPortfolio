@@ -1,0 +1,146 @@
+:root{
+    --backgroundcolor: #0e0e3a;
+    --fontsize: 3dvw;
+    --fontfamily: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    --width:100%;
+}
+
+@media (max-width: 767px) { 
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    
+    #nav{
+        display:none;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    #nav ul{
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        width: 90dvw;
+
+    }
+    
+    #nav a{
+        font-size: var(--fontsize);
+    }
+
+    #nav i{
+        font-size: 1px ;
+    }
+
+    .hamburgerspan{
+        opacity: 1 !important;
+        display: block;
+    }
+
+    #contentDiv{
+        display: block;
+    }
+
+    #sidediv{
+        width: 90dvw !important;
+        border-radius: 20px;
+    }
+
+    .sdp{
+        display: flex;
+        font-size: 25px;
+        font-family: var(--fontfamily);
+        text-shadow: 0 0 15px floralwhite;
+    }
+
+    #cardbox{
+        display: none;
+    }
+}
+
+
+/* tablets hoch */
+@media (max-width:1024px){
+    .front, .back{
+        display: none;
+    }
+
+    #sidediv{
+        width: 75dvw;
+    }
+
+    .sdp{
+        display: flex;
+        font-size: 25px;
+        font-family: var(--fontfamily);
+        text-shadow: 0 0 15px floralwhite;
+    }
+}
+
+
+/* tablets seite */
+@media (min-width:1024px) and (max-width:1366px) {
+    body{
+        overflow-y: scroll;
+        scrollbar-width: 0;
+    } 
+    body::-webkit-scrollbar{
+        display: none;
+    }
+
+    .front, .back{
+        width: 33dvw !important;
+        height: 45dvh !important;
+        margin-top: 2.5dvh;
+    }
+
+}
+
+@media (min-width:1366px) and (max-width:1400px) {
+    .front, .back{
+        width: 33dvw !important;
+        height: 50dvh !important;
+    }
+}
+
+.hamburgerspan{
+    background-color: var(--backgroundcolor);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: fixed;
+    right: 2%;
+    top: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    padding: 5px;
+}
+
+.ham{
+    width: 30px;
+    height: 3px;
+    border-radius: 10px;
+    background-color: white;
+
+}
+
+.hamburgerspan:hover{
+    background-color: rgb(3, 3, 26);
+}
+
+.test{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100dvw;
+    height: 50dvh;
+    background-color: green;
+}
+
+/* 850px */

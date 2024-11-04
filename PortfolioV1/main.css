@@ -1,0 +1,139 @@
+/* TODO handyansicht icon */
+
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+
+:root{
+    --backgroundcolor: #0e0e3a;
+    --fontfamily: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body{
+    height: 600dvh;
+    width: 100dvw;
+    overflow-x: hidden; 
+    background-image: url(Images/background.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+#grid{
+    width: 100dvw;
+    height: 100dvh;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#header{
+    grid-row: 1/5;
+    grid-column: 1/5;
+    position: fixed;
+    top: 0.5dvw;
+    z-index: 15;
+    display: grid;
+    place-items: center;
+}
+
+#nav{
+    min-height: 100%;
+    backdrop-filter: blur(5px);
+    background-color: #282c3463;
+    border-radius: 0.625vw;
+    box-shadow: 0px 0px 1rem floralwhite;
+}
+
+#nav ul{
+    position: sticky;
+    top: 0.5dvh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#nav a{
+    text-decoration: none;
+    color: white;
+    font-family: var(--fontfamily);
+    font-size: 1.625vw;
+    z-index: 2;
+    background-color: transparent;
+    padding: 0.1rem;
+    
+}
+
+#header li{
+    transition: all 0.3s ease-in-out;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    padding: 1vw;
+    cursor: pointer;
+}
+
+#header li i{
+    color: white;
+    padding: 5px;
+    font-size: 25px;
+    transition: all 0.3s ease-in-out;
+}
+
+#header li a:hover{
+    color: cornflowerblue;
+}
+
+#content{
+    grid-row: 1/5;
+    grid-column: 0/5;
+    margin-top: 10dvh;
+}
+
+#contentDiv{
+    display: flex;
+    height: 60dvh;
+}
+
+.nummer{
+    position: absolute;
+    bottom: 1dvh;
+    left: 1dvw;
+    color: white;
+    padding: 10px;
+    font-size: 25px;
+    border-radius: 50%;
+    box-shadow: 0 0 3px 3px white;
+    font-family: var(--fontfamily);
+}
+
+#sidediv{
+    height: 55dvh;
+    width: 50dvw;
+    margin: 0 5dvw;
+    padding: var(--padding-parent);
+    font-family: var(--fontfamily);
+    border-radius: 44% 56% 70% 30% / 54% 42% 58% 46%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('Images/Eyecatcher.jpg');
+    background-position: center;
+    border: 0.1vw solid #282c34;
+    text-transform: uppercase;
+}
+
+.sdp{
+    display: none;
+}
+

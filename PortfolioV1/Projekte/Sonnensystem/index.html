@@ -1,0 +1,471 @@
+<!doctype html>
+    <html lang="de">
+        <head>
+            <title>Sonnensystem</title>
+
+            <meta charset="utf-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"/>
+
+            <link rel="stylesheet" href="Sonnensystem2.css">
+
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+        </head>
+
+        <body>
+            <div class="fluid" id="space">
+
+                <div id="chart">
+                    <table id="planetsChart">
+                        <tr class="chartRow">
+                            <th class="chartHeader Nummer">
+                                Nummer
+                            </th>
+                            <th class="chartHeader Name">
+                                Name
+                            </th>
+                            <th class="chartHeader Körper">
+                                Himmelkörperart
+                            </th>
+                        </tr>
+                        <tr class="chartRow">
+                            <td class="chartData Nummer">
+                                1
+                            </td>
+                            <td class="chartData Name" onclick="displayChart('Sonne')" onmouseover="zoomBody('sunImg')" onmouseout="zoomBodyOut('sunImg')">
+                                <a href="#Sonne" class="planetLink sunny">Sonne</a>
+                            </td>
+                            <td class="chartData Körper">
+                                Stern
+                            </td>
+                        </tr>
+                        <tr class="chartRow">
+                            <td class="chartData Nummer">
+                                2
+                            </td>
+                            <td class="chartData Name" onclick="displayChart('Merkur')" onmouseover="zoomBody('mercuryImg')" onmouseout="zoomBodyOut('mercuryImg')">
+                                <a href="#Merkur" class="planetLink">Merkur</a>
+                            </td>
+                            <td class="chartData Körper">
+                                Gesteinsplanet
+                            </td>
+                        </tr>
+                        <tr class="chartRow">
+                            <td class="chartData Nummer">
+                                3
+                            </td>
+                            <td class="chartData Name" onclick="displayChart('Venus')" onmouseover="zoomBody('venusImg')" onmouseout="zoomBodyOut('venusImg')">
+                                <a href="#Venus" class="planetLink">Venus</a>
+                            </td>
+                            <td class="chartData Körper">
+                                Gesteinsplanet
+                            </td>
+                        </tr>
+                        <tr class="chartRow">
+                            <td class="chartData Nummer">
+                                4
+                            </td>
+                            <td class="chartData Name" onclick="displayChart('Erde')" onmouseover="zoomBody('earthImg')" onmouseout="zoomBodyOut('earthImg')">
+                                <a href="#Erde" class="planetLink">Erde</a>
+                            </td>
+                            <td class="chartData Körper">
+                                Gesteinsplanet
+                            </td>
+                        </tr>
+                        <tr class="chartRow">
+                            <td class="chartData Nummer">
+                                5
+                            </td>
+                            <td class="chartData Name" onclick="displayChart('Mars')" onmouseover="zoomBody('marsImg')" onmouseout="zoomBodyOut('marsImg')">
+                                <a href="#Mars" class="planetLink">Mars</a>
+                            </td>
+                            <td class="chartData Körper">
+                                Gesteinsplanet
+                            </td>
+                        </tr>
+                        <tr class="chartRow">
+                            <td class="chartData Nummer">
+                                6
+                            </td>
+                            <td class="chartData Name" onclick="displayChart('Jupiter')" onmouseover="zoomBody('jupiterImg')" onmouseout="zoomBodyOut('jupiterImg')">
+                                <a href="#Jupiter" class="planetLink">Jupiter</a>
+                            </td>
+                            <td class="chartData Körper">
+                                Gasplanet
+                            </td>
+                        </tr>
+                        <tr class="chartRow">
+                            <td class="chartData Nummer">
+                                7
+                            </td>
+                            <td class="chartData Name" onclick="displayChart('Saturn')" onmouseover="zoomBody('saturnImg')" onmouseout="zoomBodyOut('saturnImg')">
+                                <a href="#Saturn" class="planetLink">Saturn</a>
+                            </td>
+                            <td class="chartData Körper">
+                                Gasplanet
+                            </td>
+                        </tr>
+                        <tr class="chartRow">
+                            <td class="chartData Nummer">
+                                8
+                            </td>
+                            <td class="chartData Name" onclick="displayChart('Uranus')" onmouseover="zoomBody('uranusImg')" onmouseout="zoomBodyOut('uranusImg')">
+                                <a href="#Uranus" class="planetLink">Uranus</a>
+                            </td>
+                            <td class="chartData Körper">
+                                Gasplanet
+                            </td>
+                        </tr>
+                        <tr class="chartRow">
+                            <td class="chartData Nummer">
+                                9
+                            </td>
+                            <td class="chartData Name" onmouseover="zoomBody('neptunImg')" onmouseout="zoomBodyOut('neptunImg')">
+                                <a href="#Neptun" class="planetLink" onclick="displayChart('Neptun')">Neptun</a>
+                            </td>
+                            <td class="chartData Körper">
+                                Gasplanet
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <img src="blackspace.jpg" class="spacebg" onclick="clickaway('Sonne', 'Merkur', 'Venus', 'Erde', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptun')" width="100%" height="100%">
+
+                <div id="sunDiv">
+                    <div id="sun">
+                        <a href="#Sonne" onclick="displayBeschreibung('Sonne')">
+                            <img src="sonnenobg.png" class="sun" id="sunImg" alt="">
+                        </a>
+                    </div>
+                    <div id="Sonne">
+                        <div class="close" onclick="closeContent('Sonne')">
+                            <i class="fas fa-times" aria-hidden="true"></i>
+                        </div>
+
+                        <img src="sonnenobg.png" class="Himmelkörper" alt="">
+
+                        <div id="Beschreibungsdiv">
+                            <p class="planetBeschreibung">Die Sonne ist der Stern, welcher der Erde am nächsten ist und das Zentrum des Sonnensystems bildet. Sie ist ein durchschnittlich großer Stern im äußeren Drittel der Milchstraße. Die Sonne ist ein Zwergstern (Gelber Zwerg), der sich im Entwicklungsstadium der Hauptreihe befindet. Sie enthält 99,86 % der Masse, jedoch nur ca. 0,5 % des Drehimpulses des Sonnensystems. Ihr Durchmesser ist mit 1,4 Millionen Kilometern etwa 110-mal so groß wie der der Erde. Die Oberfläche der Sonne zeigt eine wechselnde Zahl von Sonnenflecken, die in Zusammenhang mit starken Magnetfeldern stehen. Sie werden neben weiteren Phänomenen als Sonnenaktivität bezeichnet.
+
+                            <br><br>
+
+                            Die Sonnenstrahlung ist eine der Grundvoraussetzungen für die Entwicklung und den Erhalt des Lebens auf der Erde. Die durch die Sonnenstrahlung freigesetzte Energie beruht auf der Kernfusion von Wasserstoff zu Helium, das sogenannte Wasserstoffbrennen in der Proton-Proton-Reaktion. Die Erde erreichen pro Jahr etwa 1,5 · 1018 kWh an Sonnenenergie, 10 000-mal mehr, als die Menschen an Energie verbrauchen.
+                            
+                            <br><br>
+                            
+                            Der Himmelslauf der Sonne gliedert den Tag und das Jahr. Sie wurde in dieser Rolle schon in der Urzeit in Sonnenkulten verehrt. Das astronomische Symbol der Sonne ist ☉.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="mercuryDiv">
+                    <div id="mercuryPlanet">
+                        <div class="Planet">
+                            <a href="#Merkur" onclick="displayBeschreibung('Merkur')">
+                                <img src="merkur-removebg-preview.png" class="mercury" id="mercuryImg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div id="Merkur">
+                        <div class="close" onclick="closeContent('Merkur')">
+                            <i class="fas fa-times" aria-hidden="true"></i>
+                        </div>
+
+                        <img src="merkur-removebg-preview.png" class="Himmelkörper" alt="">
+
+                        <div id="Beschreibungsdiv">
+                            <p class="planetBeschreibung">Der Merkur ist mit einem Durchmesser von knapp 4880 Kilometern der kleinste, mit einer durchschnittlichen Sonnenentfernung von etwa 58 Millionen Kilometern der sonnennächste und somit auch schnellste Planet im Sonnensystem. Er hat mit einer maximalen Tagestemperatur von rund +430 °C und einer Nachttemperatur bis −170 °C die größten Oberflächen-Temperaturschwankungen aller Planeten.
+                            <br><br>
+                            Aufgrund seiner Größe und seiner chemischen Zusammensetzung zählt er zu den erdähnlichen Planeten.
+                            <br><br>    
+                            Wegen seiner Sonnennähe ist er von der Erde aus schwer zu beobachten, da er nur einen maximalen Winkelabstand von etwa 28° von der Sonne erreicht. Freiäugig ist er nur maximal eine Stunde lang entweder am Abend- oder am Morgenhimmel zu sehen, teleskopisch hingegen auch tagsüber. Details auf seiner Oberfläche sind ab einer Fernrohröffnung von etwa 20 cm zu erkennen.
+                            <br><br>    
+                            In 46 % der Zeit ist Merkur der am nächsten bei der Erde befindliche Planet.
+                            <br><br>    
+                            Benannt ist der Merkur nach dem Götterboten Mercurius, dem römischen Gott der Händler und Diebe. Sein astronomisches Symbol ist ☿</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="venusDiv">
+                    <div id="venusPlanet">
+                        <div class="Planet">
+                            <a href="#Venus" onclick="displayBeschreibung('Venus')">
+                                <img src="venus-removebg-preview.png" alt="" id="venusImg" class="venus">
+                            </a>
+                        </div>
+                    </div>
+                    <div id="Venus">
+                        <div class="close" onclick="closeContent('Venus')">
+                            <i class="fas fa-times" aria-hidden="true"></i>
+                        </div>
+
+                        <img src="venus-removebg-preview.png" class="Himmelkörper" alt="">
+
+                        <div id="Beschreibungsdiv">
+                            <p class="planetBeschreibung">Die Venus ist mit einer durchschnittlichen Sonnenentfernung von 108 Millionen Kilometern der zweitinnerste und mit einem Durchmesser von ca. 12.100 Kilometern der drittkleinste Planet des Sonnensystems. Sie zählt zu den vier erdähnlichen Planeten, die auch terrestrische oder Gesteinsplaneten genannt werden.
+                            <br><br>
+                            Die Venus ist der Planet, der auf seiner Umlaufbahn der Erdbahn mit einem minimalen Abstand von 38 Millionen Kilometern am nächsten kommt. Sie hat eine ähnliche Größe wie die Erde, unterscheidet sich aber in Bezug auf die Geologie und vor allem hinsichtlich ihrer Atmosphäre. Diese besteht zu 96 % aus Kohlenstoffdioxid und ihr Oberflächendruck ist 90-mal höher als auf der Erde.
+                            <br><br>    
+                            Nach Sonne und Mond ist die Venus das hellste astronomische Objekt am nächtlichen Himmel. Weil sie als einer der unteren Planeten nur am Morgen- oder Abendhimmel sichtbar ist und nie gegen Mitternacht, wird sie auch Morgenstern und Abendstern genannt. Schon mit einem kleinen Fernrohr ist sie auch am Taghimmel beobachtbar, manchmal sogar freiäugig. Doch auch bei Erdnähe (ca. alle eineinhalb Jahre) lassen sich nur die Wolkenstreifen der äußerst dichten Atmosphäre erkennen. Die Erkundung der Oberfläche erfordert Radar.
+                            <br><br>    
+                            Das astronomische Symbol des Planeten Venus gilt als stilisierte Repräsentation des Handspiegels der namensgebenden römischen Liebesgöttin Venus.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="earthDiv">
+                    <div id="earthPlanet">
+                        <div class="Planet">
+                            <a href="#Erde" onclick="displayBeschreibung('Erde')">
+                                <img src="erde-removebg-preview.png" alt="" id="earthImg" class="earth">
+                            </a>
+                        </div>
+                    </div>
+                    <div id="Erde">
+                        <div class="close" onclick="closeContent('Erde')">
+                            <i class="fas fa-times" aria-hidden="true"></i>
+                        </div>
+
+                        <img src="erde-removebg-preview.png" class="Himmelkörper" alt="">
+
+                        <div id="Beschreibungsdiv">
+                            <p class="planetBeschreibung">Die Erde ist der dice, fünftgrößte und der Sonne drittnächste Planet des Sonnensystems. Sie ist Ursprungsort und Heimat aller bekannten Lebewesen. Ihr Durchmesser beträgt mehr als 12.700 Kilometer und ihr Alter etwa 4,6 Milliarden Jahre. Nach ihrer vorherrschenden geochemischen Beschaffenheit wurde der Begriff der „erdähnlichen Planeten“ geprägt. Das astronomische Symbol der Erde ist ♁ oder 🜨.
+                            <br><br>
+                            Die Erde hat eine gasförmige Hülle, die Erdatmosphäre, wo aus Wasserdampf Wolken entstehen können. Die Erdoberfläche bilden zu etwa zwei Dritteln Ozeane, zu etwa einem Drittel Kontinente. Da sie vom All aus betrachtet vorwiegend blau erscheint, wird die Erde auch Blauer Planet genannt. Sie wird metaphorisch auch als „Raumschiff Erde“ bezeichnet.
+                            <br><br>    
+                            Die Erde spielt als Lebensgrundlage des Menschen in allen Religionen eine herausragende Rolle als heilige Ganzheit; in etlichen ethnischen, Volks- und historischen Religionen entweder als Vergöttlichung einer „Mutter Erde“ oder personifiziert als Erdgöttin.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="marsDiv">
+                    <div id="marsPlanet">
+                        <div class="Planet">
+                            <a href="#Mars" onclick="displayBeschreibung('Mars')">
+                                <img src="mars-removebg-preview.png" alt="" id="marsImg" class="mars">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="Mars">
+                    <div class="close" onclick="closeContent('Mars')">
+                        <i class="fas fa-times" aria-hidden="true"></i>
+                    </div>
+
+                    <img src="mars-removebg-preview.png" class="Himmelkörper" alt="">
+
+                    <div id="Beschreibungsdiv">
+                        <p class="planetBeschreibung">
+                            Der Mars ist, von der Sonne aus gezählt, der vierte Planet im Sonnensystem und der äußere Nachbar der Erde. Er zählt zu den erdähnlichen (terrestrischen) Planeten.
+                            <br><br>
+                            Sein Durchmesser ist mit knapp 6800 Kilometern etwa halb so groß wie der der Erde und sein Volumen beträgt gut ein Siebtel des Erdvolumens, womit der Mars nach dem Merkur der zweitkleinste Planet des Sonnensystems ist. Er weist eine vielfältige Geologie sowie die höchsten Vulkane des Sonnensystems auf. Mit einer durchschnittlichen Entfernung von 228 Millionen Kilometern ist er rund 1,5-mal so weit von der Sonne entfernt wie die Erde.
+                            <br><br>
+                            Die Masse des Mars beträgt etwa ein Zehntel der Erdmasse. Die Fallbeschleunigung auf seiner Oberfläche beträgt 3,69 m/s², dies entspricht etwa 38 % der irdischen. Mit einer Dichte von 3,9 g/cm³ weist der Mars den geringsten Wert der terrestrischen Planeten auf. Deshalb ist die Schwerkraft auf ihm sogar geringfügig niedriger als auf dem kleineren, jedoch dichteren Merkur.
+                            <br><br>
+                            Der Mars wird auch als der Rote Planet bezeichnet. Diese Färbung geht auf Eisenoxid-Staub (Rost) zurück, der sich auf der Oberfläche und in der dünnen CO2-Atmosphäre verteilt hat. Seine orange- bis blutrote Farbe und seine Helligkeitsschwankungen am irdischen Nachthimmel sind auch der Grund für seine Namensgebung nach dem römischen Kriegsgott Mars.
+                            <br><br>
+                            In größeren Fernrohren deutlich sichtbar sind die zwei Polkappen und mehrere dunkle Ebenen, die sich im Frühjahr etwas verfärben. Fotos von Raumsonden zeigen eine teilweise mit Kratern bedeckte Oberfläche und starke Spuren früherer Tektonik (tiefe Canyons und einen über 20 km hohen Vulkan). Marsroboter haben schon mehrere Gebiete geologisch untersucht.
+                            <br><br>
+                            Der Mars besitzt zwei kleine, unregelmäßig geformte Monde, die 1877 entdeckt wurden: Phobos und Deimos (griechisch für Furcht und Schrecken).
+                        </p>
+                    </div>
+                </div>
+
+                <div id="saturnDiv">
+                    <div id="saturnPlanet">
+                        <div class="Planet">
+                            <a href="#Saturn" onclick="displayBeschreibung('Saturn')">
+                                <img src="saturn-removebg-preview.png" alt="" id="saturnImg" class="saturn">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="Saturn">
+                    <div class="close" onclick="closeContent('Saturn')">
+                        <i class="fas fa-times" aria-hidden="true"></i>
+                    </div>
+
+                    <img src="saturn-removebg-preview.png" class="Himmelkörper" alt="">
+
+                    <div id="Beschreibungsdiv">
+                        <p class="planetBeschreibung">Der Saturn ist von der Sonne aus gesehen der sechste Planet des Sonnensystems und mit einem Äquatordurchmesser von etwa 120.500 Kilometern (9,5-facher Erddurchmesser) nach Jupiter der zweitgrößte. Mit 95 Erdmassen hat er jedoch nur 30 % der Masse Jupiters. Wegen seines auffallenden und schon im kleinen Fernrohr sichtbaren Ringsystems wird er oft auch der Ringplanet genannt, obwohl auch bei den anderen drei Gasplaneten Ringsysteme gefunden wurden. <br><br>
+
+                        Der Saturn hat eine durchschnittliche Entfernung zur Sonne von gut 1,43 Milliarden Kilometern, seine Bahn verläuft zwischen der von Jupiter und der des sonnenferneren Uranus. Er ist der äußerste Planet, der auch mit bloßem Auge gut sichtbar ist, und war daher schon Jahrtausende vor der Erfindung des Fernrohrs bekannt. <br><br>
+                            
+                        Als Gasplanet hat Saturn keine feste Oberfläche. Seine oberen Schichten bestehen zu etwa 96 % Stoffanteil aus Wasserstoff. Von allen Planeten des Sonnensystems weist Saturn die geringste mittlere Dichte auf (etwa 0,69 g/cm³). Von den anderen Planeten hebt sich der Saturn durch seine ausgeprägten, hellen und schon lange bekannten Ringe ab, die zu großen Teilen aus Wassereis- und Gesteinsbrocken bestehen. <br><br>
+                            
+                        Der scheinbare Winkeldurchmesser des Planetenkörpers beträgt je nach Erdentfernung zwischen 15″ und 20″, jener der Ringe zwischen 37″ und 46″. Die sogenannten Äquatorstreifen der Wolkenschichten sind auf Saturn weniger deutlich ausgeprägt als bei Jupiter, was wahrscheinlich mit einer hochlagernden Dunstschicht zusammenhängt. <br><br>
+                            
+                        Bis 2023 wurden 146 Monde des Saturns entdeckt. Der mit Abstand größte Saturnmond ist Titan mit 5150 Kilometern Durchmesser. <br><br>
+                            
+                        Benannt ist der Planet nach dem römischen Gott des Reichtums und der Ernte, Saturn. Sein astronomisches Symbol ♄ stilisiert die Sichel des Gottes.</p>
+                    </div>
+                </div>
+
+                <div id="jupiterDiv">
+                    <div id="jupiterPlanet">
+                        <div class="Planet">
+                            <a href="#Jupiter" onclick="displayBeschreibung('Jupiter')">
+                                <img src="jupiter-removebg-preview.png" alt="" id="jupiterImg" class="jupiter">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="Jupiter">
+                    <div class="close" onclick="closeContent('Jupiter')">
+                        <i class="fas fa-times" aria-hidden="true"></i>
+                    </div>
+
+                    <img src="jupiter-removebg-preview.png" class="Himmelkörper" alt="">
+
+                    <div id="Beschreibungsdiv">
+                        <p class="planetBeschreibung">
+                            Jupiter ist mit einem Äquatordurchmesser von rund 143.000 Kilometern der größte Planet des Sonnensystems. Mit einer durchschnittlichen Entfernung von 778 Millionen Kilometern ist er von der Sonne aus gesehen der fünfte Planet. Er ist nach dem römischen Hauptgott Jupiter benannt. <br><br>
+
+                            Der Planet hat – wie auch Saturn, Uranus und Neptun – keine feste Oberfläche. Die schon im kleinen Fernrohr sichtbaren, fast parallelen Streifen sind farbige Wolkenbänder. Aufgrund seiner chemischen Zusammensetzung zählt Jupiter zu den Gasplaneten. Diese „Gasriesen“ bilden im Sonnensystem die Gruppe der äußeren Planeten; sie werden auch als jupiterähnliche (jovianische) Planeten bezeichnet. In dieser Gruppe ist Jupiter der innerste Planet; er läuft jenseits des Asteroidengürtels um die Sonne. <br><br>
+
+                            Bis 1980 kannte man 16 Monde, darunter 6 mit nur etwa 20 km Durchmesser. Die Voyager-Raumsonden der 1980er-Jahre entdeckten über 40 weitere Satelliten; seit 2023 sind 95 Monde bekannt. Die vier größten sogenannten Galileischen Monde Ganymed, Kallisto, Io und Europa haben Durchmesser zwischen 5262 und 3122 km und wurden bereits 1610 entdeckt. <br><br>
+
+                            Jupiter ist das dritthellste Objekt des Nachthimmels nach Mond und Venus; nur selten kann Mars geringfügig heller sein. In Babylonien galt er wegen seines goldgelben Lichts als Königsstern (siehe auch Stern von Betlehem). Sein astronomisches Symbol ist ♃.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="uranusDiv">
+                    <div id="uranusPlanet">
+                        <div class="Planet">
+                            <a href="#Uranus" onclick="displayBeschreibung('Uranus')">
+                                <img src="Uranus2-removebg-preview.png" alt="" id="uranusImg" class="uranus">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="Uranus">
+                    <div class="close" onclick="closeContent('Uranus')">
+                        <i class="fas fa-times" aria-hidden="true"></i>
+                    </div>
+
+                    <img src="Uranus2-removebg-preview.png" class="Himmelkörper" alt="">
+
+                    <div id="Beschreibungsdiv">
+                        <p class="planetBeschreibung">Der Uranus (Latinisierung von altgriechisch οὐρανός uranós, deutsch ‚Himmel‘) ist von der Sonne aus mit einer durchschnittlichen Sonnenentfernung von 2,9 Milliarden Kilometern der siebte Planet im Sonnensystem und wird zu den Eisriesen gerechnet. Er wurde am 13. März 1781 von Wilhelm Herschel entdeckt und ist nach dem griechischen Himmelsgott Uranos benannt. Er ist damit als einziger Planet nach einem Gott der griechischen Götterwelt benannt.
+                        <br><br>
+                        Der Durchmesser dieses Riesenplaneten ist mit über 51.000 Kilometern etwa viermal so groß wie der Durchmesser der Erde, das Volumen ist etwa 64-mal so groß wie das der Erde. Physikalisch ist Uranus mit dem Neptun vergleichbar und nimmt nach ihm mit rund 14 Erdmassen in der Massenrangfolge im Sonnensystem unter den Planeten den vierten Platz ein. Hinsichtlich des Durchmessers liegt er knapp vor Neptun auf Rang drei – nach Jupiter und Saturn.
+                        <br><br>
+                        Das astronomische Symbol des Uranus ist dem Marssymbol ähnlich. Im Unterschied zu diesem hat der Kreis einen Zentralpunkt, und der Pfeil auf dem Kreis steht senkrecht. Ein anderes, hauptsächlich in der Astrologie verwendetes Uranussymbol ist .
+                        <br><br>
+                        Uranus ist nur unter sehr günstigen Umständen freiäugig sichtbar, im kleinen Fernglas aber schon gut zu sehen. Seine blassgrüne Scheibe ist von der Erde aus betrachtet etwa 3,5″ groß. Mit Stand 2020 steht Uranus im Sternbild Widder und ist damit am Herbst- und Winterhimmel gut zu beobachten. Er läuft auf der Ekliptik um gut 4° pro Jahr nach Osten, 2024 wird er ins Sternbild Stier eintreten.</p>
+                    </div>
+                </div>
+
+                <div id="neptunDiv">
+                    <div id="neptunPlanet">
+                        <div class="Planet">
+                            <a href="#Neptun" onclick="displayBeschreibung('Neptun')">
+                                <img src="naptunnobg-removebg-preview.png" alt="" id="neptunImg" class="neptun">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="Neptun">
+                    <div class="close" onclick="closeContent('Neptun')">
+                        <i class="fas fa-times" aria-hidden="true"></i>
+                    </div>
+
+                    <img src="naptunnobg-removebg-preview.png" class="Himmelkörper" alt="">
+
+                    <div id="Beschreibungsdiv">
+                        <p class="planetBeschreibung">Der Neptun ist der achte und äußerste bekannte Planet unseres Sonnensystems. Er wurde 1846 aufgrund von Berechnungen aus Bahnstörungen des Uranus durch den französischen Mathematiker Urbain Le Verrier von dem deutschen Astronomen Johann Gottfried Galle entdeckt. Neptun ist durchschnittlich 4,5 Milliarden Kilometer von der Sonne entfernt. Von der Erde aus hat er einen scheinbaren Durchmesser von ca. 2 Winkelsekunden. Mit einem Durchmesser von knapp 50.000 Kilometern hat Neptun fast den vierfachen Erddurchmesser und das rund 58-fache Erdvolumen. Nach Jupiter, Saturn und Uranus ist Neptun der viertgrößte Planet des Sonnensystems.
+                        <br><br>    
+                        Zusammen mit Uranus bildet Neptun die Untergruppe der Eisriesen. Neptun dominiert durch seine Größe die Außenzone des Planetensystems, was sich zum Beispiel an der Umlaufzeit einiger „Transneptune“ wie Pluto und der Plutino-Gruppe zeigt, die etwa das 1,5fache der Umlaufzeit von Neptun beträgt (eine 3:2-Bahnresonanz). Von den 16 bekannten Monden Neptuns ist Triton mit 2700 Kilometern Durchmesser der mit Abstand größte.
+                        <br><br>    
+                        Der Riesenplanet ist nach Neptun benannt, dem römischen Gott des Meeres und der Fließgewässer. Sein Zeichen ♆ ist ein stilisierter Dreizack, die Waffe des Meeresgottes. Bei der Suche nach Exoplaneten werden Objekte, die eine ähnliche Masse wie Neptun aufweisen, von Astronomen analog zu den extrasolaren „Jupiters“ oder „Hot Jupiters“ manchmal als Planet der „Neptun-Klasse“ oder als „Hot Neptune“ bezeichnet. Nach dem Planeten wurde das 1940 entdeckte chemische Element Neptunium benannt.
+                        <br><br>    
+                        Als einziger Planet des Sonnensystems ist Neptun von der Erde aus nicht mit bloßem Auge erkennbar. Seine Opposition war 2023 am 19. September und verlagert sich jährlich um etwa zwei Tage nach hinten.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <script>
+                var letzterDiv = null;
+
+                function displayChart(elementId) {
+                    var Beschreibung = document.getElementById(elementId);
+
+                    // Wenn ein anderes div zuvor geöffnet war, schließe es
+                    if (letzterDiv && letzterDiv !== Beschreibung) {
+                        letzterDiv.style.display = 'none';
+                    }
+
+                    // Öffne oder schließe das aktuelle div
+                    Beschreibung.style.display = (Beschreibung.style.display === 'block') ? 'none' : 'block';
+
+                    // Aktualisiere das letzte geöffnete div
+                    letzterDiv = Beschreibung;
+                };
+
+                function zoomBody(elementId) {
+                    var zoom = document.getElementById(elementId);
+
+                    zoom.style.transform = "scale(1.5)"
+                };
+
+                function zoomBodyOut(elementId) {
+                    var zoomOut = document.getElementById(elementId);
+
+                    zoomOut.style.transform = "scale(1)";
+                };
+
+                var letzteBeschreibung = null;
+
+                // lernen!!!
+                function displayBeschreibung(elementId) {
+                    var beschreibung = document.getElementById(elementId);
+
+                    if (letzteBeschreibung && letzteBeschreibung !== beschreibung) {
+                        letzteBeschreibung.style.display = "none";
+                    }
+
+                    beschreibung.style.display = (beschreibung.style.display === 'block') ? 'none' : 'block';
+
+                    letzteBeschreibung = beschreibung;
+                };
+
+                function closeContent(elementId) {
+                    var content = document.getElementById(elementId);
+
+                    content.style.display = "none";
+                };
+
+                function clickaway() {
+                    for (i = 0; i < arguments.length; i++){
+                        var bodyVar = document.getElementById(arguments[i]);
+
+                            bodyVar.style.display = "none"
+                    }
+                }
+            </script>
+
+            <script
+                src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+                integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+                crossorigin="anonymous"
+            ></script>
+
+            <script
+                src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+                integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+                crossorigin="anonymous"
+            ></script>
+        </body>
+    </html>

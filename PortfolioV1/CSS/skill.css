@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --fontfamily: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    --fontsize: 1.25rem;
+    --fontsizep:1.75rem;
+    --fontpara: 3dvw;
+}
+
+#skillgrid{
+    position: absolute;
+    top: 205dvh;
+    height: 100dvh;
+    width: 100dvw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--fontfamily);
+}
+
+#skillbox{
+    width: 85dvw;
+    height: 75%;
+    background-color: #282c3479;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 15px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#skillbox div{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.hardskills > *, .softskills > *{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#html{
+    background: conic-gradient(#FFD700 0% 80%, floralwhite 0% 100%);
+}
+
+#bt{
+    background: conic-gradient(#FFD700 0% 60%, floralwhite 0% 100%);
+}
+
+#js{
+    background: conic-gradient(#FFD700 0% 33%, floralwhite 0% 100%);
+}
+
+#office{
+    background: conic-gradient(#FFD700 0% 50%, floralwhite 0% 100%);
+}
+
+#photo{
+    background: conic-gradient(#FFD700 0% 40%, floralwhite 0% 100%);
+}
+
+#Kritik{
+    background: conic-gradient(#FFD700 0% 75%, floralwhite 0% 100%);
+}
+
+#engagement{
+    background: conic-gradient(#FFD700 0% 95%, floralwhite 0% 100%);
+}
+
+#zuverlässigkeit{
+    background: conic-gradient(#FFD700 0% 99%, floralwhite 0% 100%);
+}
+
+#empathie{
+    background: conic-gradient(#FFD700 0% 80%, floralwhite 0% 100%);
+}
+
+#ziel{
+    background: conic-gradient(#FFD700 0% 95%, floralwhite 0% 100%);
+}
+
+.innererKreis{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    width: 135px;
+    height: 135px;
+    background-color: #282c34;
+    border-radius: 50%;
+}
+
+.innererKreis i{
+    color: #F4C542;
+    font-size: var(--fontsizep);
+}
+
+.specific{
+    display: none;
+}
+
+.innererKreis p{
+    font-size: var(--fontsize)
+    ;}
+
+@media (max-width:766px) {
+   .innerkreis p{
+    font-size:1px;
+   }
+
+   .hardskills > *, .softskills > *{
+    width: 60px;
+    height: 60px;
+   }
+
+   .innererKreis{
+    height: 54px;
+    width: 54px;
+   }
+
+   .innerp, .general{
+    display: none;
+   }
+
+   .outerP{
+    margin-top: 140px;
+    font-size: 1.25dvh;
+   }
+
+   .specific{
+    display: block;
+    color: white !important;
+   }
+}
+
+/* hoch */
+@media (max-width:1024px){
+    
+}
+
+/* seite */
+@media (min-width:1024px) {
+   
+}
+
+@media (min-width:1366px) {
+
+}

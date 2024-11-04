@@ -1,0 +1,213 @@
+#service{
+    position: absolute;
+    top: 105dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5dvw;
+}
+
+#selfportrait, #aboutme{
+    height: 100dvh;
+}
+
+#selfportrait{
+    width: 40dvw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#selfportrait img{
+    width: 75%;
+    height: 75%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+#aboutme{
+    width: 50dvw;
+    height: 75dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #282c34;
+    border-radius: 15px;
+    padding: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+} 
+
+.topic{
+    color: cornflowerblue;
+    font-weight: bolder;
+    font-size: var(--phz);
+}
+
+#heading{
+    color: white;
+    font-size: var(--font-nav);
+}
+
+#aboutp{
+    color: white;
+    font-size: var(--p);
+    overflow: auto;
+}
+
+.mark{
+    font-weight: 300;
+}
+
+.shortsummary{
+    display: flex; 
+    justify-content: space-evenly;
+    
+}
+
+
+.shortsummary tr{
+    background-color: gray;
+    border-radius: 15px;
+}
+
+.shortsummary td{
+    width: 15dvw;
+    text-indent: 2vw;
+    color: black;
+}
+
+.shortsummary td i{
+    color: black;
+}
+
+tr:first-child td:first-child {
+    border-top-left-radius: 10px;
+}
+
+tr:first-child td:last-child {
+    border-top-right-radius: 10px;
+}
+
+tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+}
+
+tr:hover {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    color: #282c34;
+}
+
+@media (min-width:300px) and (max-width:500px){
+    #aboutp, .projektdiv{
+        font-size: 1.65dvh !important;
+    }
+}
+
+@media (max-width:766px) {
+    #service{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100dvh;
+        width: 100dvw;
+    }
+
+    #selfportrait{
+        height: 40dvh;
+        width: 85dvw;
+    }
+
+    #selfportrait img{
+        height: 100%;
+        width: 100%;
+    }
+
+    #aboutme{
+        width: 85dvw;
+        height: 40dvh;
+    }
+
+    table{
+        display: none;
+    }
+}
+
+/* hoch */
+@media (min-width:768px) and (max-width:1024px){
+    #service{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100dvh;
+        width: 100dvw;
+    }
+
+    #selfportrait{
+        height: 40dvh;
+        width: 90dvw;
+    }
+
+    #selfportrait img{
+        height: 100%;
+    }
+
+    #aboutme{
+        width: 90dvw;
+        height: 40dvh;
+    }
+
+    #nav{
+        width: 90dvw;
+        position: sticky;
+        left: 0dvh;
+        top: 0.5dvh;
+        margin-left: -6.5%;
+    }
+
+    #nav i{
+        display: none;
+    }
+
+    .shortsummary td{
+        width: 45dvw;
+    }
+
+    table{
+        display: none;
+    }
+}
+
+@media (min-width:1024px) and (max-width:1366px) {
+    td{
+        width: 20dvw !important;
+    }
+}
+
+/* seite */
+@media (max-width:1024px) {
+    #aboutp{
+        font-size: var(--pw);
+    }
+
+
+    .shortsummary td{
+        width: 30dvw;
+    }
+}
+
+@media (min-width:1366px) {
+    #nav{
+        margin-left: 0%;
+    }
+
+    #heading{
+        font-size: 24px;
+    }
+}

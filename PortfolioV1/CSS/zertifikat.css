@@ -1,0 +1,161 @@
+/* bilder tablets anpassen */
+
+#Zertifikate{
+    position: absolute;
+    top: 405dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100dvw;
+    height: 100dvh;
+    z-index: 10;
+}
+
+.zertdiv{
+    width: 75dvw;
+    height: 75dvh;
+    background-color: #282c3479;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    border-radius: 15px;
+    color: white;
+    gap: 0dvw 2.5dvw;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0 10px;
+}
+
+.zertdiv .zertbox{
+    width: 15dvw;
+    height: 30dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 15px royalblue;
+    cursor: pointer;
+    position: relative;
+    z-index: 20;
+}
+
+.zertdiv .zertbox:hover{
+    transform: scale(1.2);
+}
+
+#IHK, #ihkbox{
+    background: url('https://iili.io/dOKWBJp.md.png') no-repeat center center;
+    background-size: cover;
+}
+
+#Zeugnis, #zeugnisbox{
+    background: url('https://iili.io/dOKWC5N.md.png') no-repeat center center;
+    background-size: cover;
+}
+
+#Nordic, #nordicbox{
+    background: url('https://iili.io/dOKWneI.md.png') no-repeat center center;
+    background-size: cover;
+}
+
+#ICDL, #icdlbox{
+    background: url('https://iili.io/dOKWfgR.md.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+#Google, #googlebox{
+    background: url('https://iili.io/dOKWobt.md.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.popoverbox{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    height: 75dvh;
+    width: 25dvw;
+    z-index: 25;
+    border-radius: 10px;
+    box-shadow: 0 0 15px red;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    transform-origin: center;
+}
+
+.googlebox{
+    width: 60dvw;
+    height: 75dvh;
+}
+
+.popoverbox i{
+    width: 2dvw;
+    height: 2dvw;
+    background-color: #282c3486;
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 30px;
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    cursor: pointer;
+}
+
+.popoverbox i:hover{
+    color: crimson;
+}
+
+.popoverbox:hover{
+    transform: translate(-50%, -35%) scale(1.35);
+}
+
+.googlebox:hover{
+    transform: translate(-50%, -50%) scale(1);
+
+}
+
+@media (max-width:766px) {
+    .zertdiv{
+        display: none;
+    }
+
+    #mobile{
+        display: block;
+    }
+}
+
+/* hoch */
+@media (min-width:766px) and (max-width:1024px){
+    #mobile{
+        display: none;
+    }
+}
+
+/* seite */
+@media (min-width:1024px) and (max-width:1366px){
+   #mobile{
+    display: none;
+   }
+
+   .popoverbox{
+    width: 60dvw;
+    height: inherit;
+   }
+
+   .popoverbox i{
+    width: 35px;
+    height: 35px;
+   }
+}
+
+@media (min-width:1366px) {
+    #mobile{
+        display: none;
+       }
+}
+
